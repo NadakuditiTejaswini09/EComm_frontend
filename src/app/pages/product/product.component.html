@@ -1,0 +1,22 @@
+<div class="product">
+    <h2>Products</h2>
+    <label for="categoryFilter">Filter by Category:</label>
+    <select id="categoryFilter" (change)="filterByCategory($event)">
+    <option value="">All</option>
+    <option value="Electronics">Electronics</option>
+    <option value="Gadgets">Gadgets</option>
+    <option value="Fashion">Fashion</option>
+    <option value="Stationary">Stationary</option>
+    <option value="Beauty">Beauty</option>
+    </select>
+    <div class="product-list" *ngIf="filteredProducts!=null">
+      <div *ngFor="let product of filteredProducts" class="product-item">
+        <img [src]="product.imageUrl" alt="{{ product.name }}">
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.description }}</p>
+        <p>Price: {{ product.price | currency :'INR' :'symbol' }}</p>
+        <p>Category: {{ product.category }}</p>
+        <button (click)="addToCart(product)">Add to Cart</button>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,83 @@
+/* homepage.component.css */
+
+/*body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://tse2.mm.bing.net/th/id/OIP.5eKrPyTnojpX9UvL47Gc0gHaE8?pid=ImgDet&w=474&h=316&rs=1'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+ }
+ 
+ .home-page {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: rgba(0, 0, 0, 0.6); 
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 100px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+ }*/
+ 
+.home-page {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://tse2.mm.bing.net/th/id/OIP.5eKrPyTnojpX9UvL47Gc0gHaE8?pid=ImgDet&w=474&h=316&rs=1'); /* Replace with your preferred image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: rgba(0, 0, 0, 0.6); /* Adding a semi-transparent overlay for readability */
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 100px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  .home-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://tse2.mm.bing.net/th/id/OIP.5eKrPyTnojpX9UvL47Gc0gHaE8?pid=ImgDet&w=474&h=316&rs=1'); /* Replace with your preferred image */
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1; /* Ensure the overlay is behind the content */
+  }
+ 
+ h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+ }
+ 
+ p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+ }
+ 
+ .home-page button {
+  background-color: #ff7f50;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+ }
+ 
+ .home-page button:hover {
+  background-color: #e67340;
+  transform: scale(1.05);
+ }
